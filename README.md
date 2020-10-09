@@ -19,11 +19,16 @@ date || credit || debit || balance
 
 $ npm install --save-dev jasmine
 $ npx jasmine init
-Download the latest Jasmine docs from their website and place in /lib dir.
 
-To run the tests:
+### To run the tests
 
-$ run SpecRunner.html
+$ npm test
+
+### To try the application
+
+Type instructions into ./run.js
+
+$ node run.js
 
 ### User Stories
 
@@ -56,3 +61,5 @@ As a user
 I'd like my bank statement to show all transactions with the date, amount withdrawn/deposited, 
 and the updated balance. 
 ```
+
+![image 1](./images/statement.png)
