@@ -2,6 +2,7 @@
 
 describe('BankAccount', function()  {
   var bankAccount;
+  var time = new Date().toISOString().slice(0, 10);
 
   beforeEach(function() {
     bankAccount = new BankAccount();
@@ -14,7 +15,7 @@ describe('BankAccount', function()  {
   it('stores a transaction history', function() {
     bankAccount.deposit(20);
     bankAccount.withdraw(10);
-    expect(bankAccount.getTransactionHistory()).toEqual([20, 10]);
+    expect(bankAccount.getTransactionHistory()).toEqual([[20, time], [-10, time]]);
   });
 
   describe('deposit', function()  {

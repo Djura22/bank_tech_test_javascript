@@ -19,12 +19,12 @@ class BankAccount {
 
   deposit(amount) {
     this.balance += amount;
-    this.transaction_history.push(amount);
+    this.transaction_history.push([amount, new Date().toISOString().slice(0, 10)]);
   };
 
   withdraw(amount) {
     this.balance -= amount;
-    this.transaction_history.push(amount);
+    this.transaction_history.push([-amount, new Date().toISOString().slice(0, 10)]);
   };
 
 
