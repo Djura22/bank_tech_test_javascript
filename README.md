@@ -58,8 +58,10 @@ I'd like to review my bank statement.
 ```
 ```
 As a user 
-I'd like my bank statement to show all transactions with the date, amount withdrawn/deposited, 
-and the updated balance. 
+I'd like my bank statement to show all transactions with the date, 
+amount withdrawn/deposited, and the updated balance. 
 ```
 
-![image 1](./images/statement.png)
+![image 1](./images/example.png)
+
+![image 2](./images/statement.png)
