@@ -21,6 +21,16 @@ describe('BankAccount', function()  {
 
   });
 
+  describe('withdraw', function()  {
+    
+    it('withdraws money from balance of account', function() {
+      bankAccount.deposit(20);
+      bankAccount.withdraw(10);
+      expect(bankAccount.getCurrentBalance()).toEqual(10);
+    });
+
+  });
+
 
 
 
