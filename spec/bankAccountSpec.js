@@ -11,6 +11,16 @@ describe('BankAccount', function()  {
     expect(bankAccount.getCurrentBalance()).toEqual(0);
   });
 
+  describe('deposit', function()  {
+    
+    it('adds additional money to balance of account', function() {
+      bankAccount.deposit(20);
+      expect(bankAccount.getCurrentBalance()).toEqual(20);
+
+    });
+
+  });
+
 
 
 

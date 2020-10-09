@@ -12,6 +12,11 @@ class BankAccount {
     return this.balance;
   };
 
+  deposit(amount) {
+    this.balance += amount;
+
+  }
+
 
 
 }

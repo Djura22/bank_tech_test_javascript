@@ -19,10 +19,11 @@ date || credit || debit || balance
 
 $ npm install --save-dev jasmine
 $ npx jasmine init
+Download the latest Jasmine docs from their website and place in /lib dir.
 
 To run the tests:
 
-$ npx jasmine
+$ run SpecRunner.html
 
 ### User Stories
 
