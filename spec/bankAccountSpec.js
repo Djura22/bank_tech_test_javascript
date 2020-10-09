@@ -64,21 +64,4 @@ describe('BankAccount', function()  {
   });
 
 
-  // describe('printStatement', function() {
-
-  //   it('prints an account statement', function() {
-  //     expect(bankAccount.printStatement()).toEqual([time, 20, "", 20]);
-  //   });
-  // });
-
-  
-
-
-
-
-
-
-
-
-
 });

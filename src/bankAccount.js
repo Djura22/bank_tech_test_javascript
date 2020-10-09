@@ -51,11 +51,16 @@ class BankAccount {
       this.transaction_history.push(transaction);
   };
   
-//   printStatement() {
-//     this.transaction_history.forEach(function(transaction) {
-//       console.log(transaction.join());
-//     });
-//   };
+  printStatement() {
+      console.log(' date || credit || debit || balance')
+    this.transaction_history.slice().reverse().forEach(function(t) {
+      console.log(
+        ` ${t.date} ||`,
+        ` ${t.credit} ||`,
+        ` ${t.debit} ||`,
+        ` ${t.balance}`    
+      );
+    });
+  };
 
 };
-
