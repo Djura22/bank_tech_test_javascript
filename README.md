@@ -1,34 +1,39 @@
 ### Bank Tech Test in Javascript
 
 #### For this tech test I will be rebuilding the previous bank tech test I did in Ruby, except this time in Javascript.
+#### I am also seeking to streamline the functionality slightly.
 
-Given a client makes a deposit of 1000 on 10-01-2012
-And a deposit of 2000 on 13-01-2012
-And a withdrawal of 500 on 14-01-2012
-When she prints her bank statement
-Then she would see:
-
-```
-date || credit || debit || balance
-14/01/2012 || || 500.00 || 2500.00
-13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00
-```
-
-### Instructions for project setup
+### Instructions For Project Setup
 
 $ npm install --save-dev jasmine
 $ npx jasmine init
 
-### To run the tests
+### To Run the Tests
 
 $ npm test
 
-### To try the application
+### To Try the Application
 
 Type instructions into ./run.js
 
 $ node run.js
+
+
+### The Brief
+
+Given a client:
+* makes a deposit of 1000 on 10-01-2012
+* And a deposit of 2000 on 13-01-2012
+* And a withdrawal of 500 on 14-01-2012
+* prints her bank statement
+Then she would see:
+
+```
+date || credit || debit || balance
+2012/01/14 || || 500.00 || 2500.00
+2012/01/13 || 2000.00 || || 3000.00
+2012/01/10 || 1000.00 || || 1000.00
+```
 
 ### User Stories
 
