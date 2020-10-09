@@ -19,7 +19,8 @@
     "karma-chrome-launcher": "^2.0.0"
   },
   "scripts": {
-    "test": "karma start my.conf.js"
+    "test": "jasmine",
+    "test-karma": "karma start my.conf.js"
   },
   "repository": {
     "type": "git",
