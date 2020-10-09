@@ -20,7 +20,7 @@ class BankAccount {
 
   deposit(amount) {
     this.balance += amount;
-    this.transaction_history.push([this.time, amount, "", this.balance]);
+    this.confirmDeposit(amount);
   };
 
   withdraw(amount) {
@@ -28,16 +28,34 @@ class BankAccount {
       throw new Error(`Invalid Balance, Balance is ${this.getCurrentBalance()}`);  
     }  
     this.balance -= amount;
-    this.transaction_history.push([this.time, "", -amount, this.balance]);
+    this.confirmWithdrawal(amount);
   };
 
+  confirmDeposit(amount) {
+    var transaction = {
+      date: this.time,
+      credit: amount,
+      debit: " ",
+      balance: this.balance
+    }
+    this.transaction_history.push(transaction);
+  };
+
+  confirmWithdrawal(amount) {
+    var transaction = {
+        date: this.time,
+        credit: " ",
+        debit: amount,
+        balance: this.balance
+      }
+      this.transaction_history.push(transaction);
+  };
   
+//   printStatement() {
+//     this.transaction_history.forEach(function(transaction) {
+//       console.log(transaction.join());
+//     });
+//   };
 
-
-
-
-
-
-
-}
+};
 

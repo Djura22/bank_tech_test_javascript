@@ -15,7 +15,7 @@ describe('BankAccount', function()  {
   it('stores a transaction history', function() {
     bankAccount.deposit(20);
     bankAccount.withdraw(10);
-    expect(bankAccount.getTransactionHistory()).toEqual([[time, 20, "", 20], [time, "", -10, 10]]);
+    expect(bankAccount.getTransactionHistory()).toEqual([ { date: time, credit: 20, debit: ' ', balance: 20 }, { date: time, credit: ' ', debit: 10, balance: 10 } ]);
   });
 
   describe('deposit', function()  {
@@ -37,15 +37,41 @@ describe('BankAccount', function()  {
 
     it('does not withdrawal more than the available balance', function() {
       bankAccount.deposit(20);
-      expect(function() { bankAccount.withdraw(21); } ).toThrowError(`Invalid Balance, Balance is ${bankAccount.balance}`)
+      expect(function() { bankAccount.withdraw(21); } ).toThrowError(`Invalid Balance, Balance is ${bankAccount.balance}`);
+    });
+
+  });
+
+  describe('confirmDeposit', function() {
+    
+    it('pushes deposit data into transaction_history as an array', function() {
+      bankAccount.balance += 10;
+      bankAccount.confirmDeposit(10);
+      expect(bankAccount.getTransactionHistory()).toEqual([ { date: time, credit: 10, debit: ' ', balance: 10 } ])
     })
 
-  }); 
+  });
+
+  describe('confirmWithdrawal', function() {
+    
+    it('pushes withdrawal data into transaction_history as an array', function() {
+      bankAccount.balance += 20;
+      bankAccount.balance -= 10;
+      bankAccount.confirmWithdrawal(10);
+      expect(bankAccount.getTransactionHistory()).toEqual([ { date: time, credit: ' ', debit: 10, balance: 10 } ])
+    })
+
+  });
 
 
+  // describe('printStatement', function() {
 
+  //   it('prints an account statement', function() {
+  //     expect(bankAccount.printStatement()).toEqual([time, 20, "", 20]);
+  //   });
+  // });
 
-
+  
 
 
 
