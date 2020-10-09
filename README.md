@@ -62,6 +62,16 @@ I'd like my bank statement to show all transactions with the date,
 amount withdrawn/deposited, and the updated balance. 
 ```
 
+### Making Transactions
+
+In the example image below you can see how transactions
+are made and how to print a statement.
+
 ![image 1](./images/example.png)
+
+### Printing a Statement
+
+As you can see in the statement image below, statements are
+printed with the most recent transactions first.
 
 ![image 2](./images/statement.png)
