@@ -5,7 +5,7 @@
 
 ### Instructions For Project Setup
 
-$ npm install --save-dev jasmine
+$ npm install --save-dev jasmine   
 $ npx jasmine init
 
 ### To Run the Tests
